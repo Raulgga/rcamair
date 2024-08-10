@@ -10,8 +10,8 @@
 <body>
   <main>
     <div class="main">
-      <button class="main__button">RESET</button>
-      <button class="main__button">HUD</button>
+      <button class="main__button" id = "reset">RESET</button>
+      <button class="main__button" id="openHud">HUD</button>
     </div>
     <div class="joistick">
       <div class="joistick__pointer"></div>
@@ -23,10 +23,12 @@
       <input type="range" class="elevator-control__input">
     </div>
   </main>
-  <div class="menu-main menu-main--active">
+  <div class="menu-main">
     <div class="menu-main__overlay"></div>
     <div class="menu-main__content"></div>
     <span class="menu-main__close">X</span>
   </div>
+  <script src="./js/utils.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 </html>

@@ -28,7 +28,7 @@ body {
   position: absolute;
   left: 50px;
   bottom: 100px;
-
+  
   &__pointer {
     border-radius: 100%;
     border: 1px solid;
@@ -38,6 +38,7 @@ body {
     position: absolute;
     top: calc(50% - 50px);
     left: calc(50% - 50px);
+    transition: 0.1s;
   }
 }
 
@@ -63,20 +64,21 @@ body {
       position: absolute;
       top: calc(50% - 50px);
       left: calc(50% - 50px);
+      pointer-events: none;
     }
   }
 }
 
 .elevator {
   &-control {
-    border: 1px solid;
     position: absolute;
     right: 50px;
-    bottom: 100px;
-
+    bottom: 400px;
+    
     &__input {
       transform: rotate(-90deg) scale(5);
-      height: 500px;
+      width: 150px;
+      height: 10px;
     }
   }
 }
@@ -99,7 +101,7 @@ body {
     }
     &__content {
       z-index: 9999;
-      background-color: blue;
+      background-color: #d3d4d8d6;
       width: 600px;
       height: 500px;
       display: flex;
@@ -108,6 +110,18 @@ body {
       padding: 1rem;
       top: 0;
       left:0;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: space-around;
+      justify-content: flex-start;
+      .content{
+        &__button{
+          margin: 0.5rem;
+          padding: 0.5rem;
+          background-color: #f1f1f1;
+          border-radius: 1rem;
+        }
+      }
     }
     &__close {
       z-index: 9999;
