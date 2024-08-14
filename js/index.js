@@ -1,6 +1,9 @@
+resetUI();
+createComponentMain('main');
+createComponentJoistick('main');
+createComponentCameraControl('main');
+createComponentElevatorControl('main');
 /*listeners*/
-document.querySelector('#openHud').addEventListener("click", () => openModal())
-document.querySelector(`#reset`).addEventListener ("click", () => reset());
 document.querySelector('.menu-main__close').addEventListener("click", () => closeModal())
 /*end listeners*/
 
@@ -18,7 +21,7 @@ const addModalContent = () => {
       "tag": "input",
       "type": "button",
       "value": "Editar HUD",
-      "action": ""
+      "action": `onclick= "editHud()"`,
     },
     {
       "tag": "input",
