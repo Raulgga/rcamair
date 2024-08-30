@@ -48,34 +48,18 @@ const reset = () => {
 
 const editHud = () => {
   const parent = () => {
-    const createParent = (classname, parentPath = "main") => {
-      let parentDiv = document.createElement('div');
-      parentDiv.className = classname;
-      document.querySelector(parentPath).appendChild(parentDiv); 
-    };
     resetUI();
-
-    createParent('.parent-main');
-    createComponentMain('.parent-main');
-    
-    createParent('.parent-joistick');
-    createComponentJoistick('.parent-joistick');
-    
-    createParent('.parent-camera-control');
-    createComponentCameraControl('.parent-camera-control');
-
-    createParent('.parent-elevator-control');
-    createComponentElevatorControl('.parent-elevator-control');
+    trueGenerateUI(true);
   };
   closeModal();
   parent();
 };
-
+//Start future DELETE
 const createComponentMain = (parent) => {
   let template = `
     <div class="main">
         <button class="main__button" id = "reset">RESET</button>
-        <button class="main__button" id="openHud">HUD</button>
+        <button class="main__button" id = "openHud">HUD</button>
     </div>`;
     document.querySelector(parent).innerHTML += template;
     document.querySelector(`#reset`).addEventListener ("click", () => reset());
@@ -111,4 +95,6 @@ const createComponentElevatorControl = (parent) => {
     document.querySelector(parent).innerHTML += template;
 };
 
-const resetUI = () => document.querySelector('main').innerHTML='';
+const resetUI = () => {
+  document.querySelector('main').innerHTML='';
+}

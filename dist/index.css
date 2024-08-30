@@ -7,6 +7,27 @@ body {
   overflow: hidden;
 }
 
+.parent-main {
+  cursor: move;
+}
+.parent-joistick {
+  cursor: move;
+}
+.parent-camera-control {
+  cursor: move;
+}
+.parent-elevator-control {
+  cursor: move;
+  position: absolute;
+  right: 50px;
+  bottom: 400px;
+  height: 300px;
+}
+.parent-elevator-control .elevator-control {
+  right: 0;
+  bottom: 0;
+}
+
 .main {
   border: 1px solid;
   background-color: pink;
@@ -25,8 +46,6 @@ body {
   height: 300px;
   width: 300px;
   position: absolute;
-  left: 50px;
-  bottom: 100px;
 }
 .joistick__pointer {
   border-radius: 100%;
@@ -49,8 +68,6 @@ body {
   height: 300px;
   width: 600px;
   position: absolute;
-  right: 200px;
-  bottom: 100px;
 }
 .camera-control__pointer {
   border-radius: 100%;
@@ -66,8 +83,7 @@ body {
 
 .elevator-control {
   position: absolute;
-  right: 50px;
-  bottom: 400px;
+  height: auto;
 }
 .elevator-control__input {
   transform: rotate(-90deg) scale(5);
